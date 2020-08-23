@@ -1,1 +1,35 @@
+name: "Halí"
+title: "Repo site template"
+baseurl: "" # the subpath of your site, e.g. /blog
+description: >-
+  Template for github repo/project page
+timezone: "America/Mexico_City"
+logo: "https://halivert.dev/img/halivert-logo.png"
+tagline: "Template for github repo/project page"
+lang: "en"
 assets: "https://halivert.dev/assets"
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "repo"
+      has_instant_view: true
+
+markdown: "kramdown"
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom
+# list to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+#   - package.json
+#   - yarn.lock
+#   - yarn-error.log

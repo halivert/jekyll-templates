@@ -35,12 +35,18 @@
     <script src="{{ site.assets }}/js/main.js"></script>
     <script src="{{ site.assets }}/js/nav.js" defer></script>
 
-    <title>{{ site.title }}</title>
+    {%- capture title -%}
+      {% if page.title %}{{ page.title }}
+      {% elsif site.title %}{{ site.title }}
+      {% endif %}
+    {%- endcapture -%}
+
+    <title>{{ title }}</title>
 
     {% seo title=false %}
-    {% if site.has_math %}
+    {% if page.has_math or site.has_math  %}
       {% include katex.html %}
-    {% elsif site.has_instant_view %}
+    {% elsif page.has_instant_view or site.has_instant_view %}
       <meta property="has_instant_view" />
     {% endif %}
   </head>
@@ -71,12 +77,18 @@
       </a>
     </nav>
 
+    {%- capture description -%}
+      {% if page.description %}{{ page.description }}
+      {% elsif site.description %}{{ site.description }}
+      {% endif %}
+    {%- endcapture -%}
+
     <main class="is-size-5">
       <section class="hero is-primary repo">
         <div class="hero-body">
           <div class="container">
-            <h1 class="title is-2">{{ site.title }}</h1>
-            <h2 class="subtitle">{{ site.description }}</h2>
+            <h1 class="title is-2">{{ title }}</h1>
+            <h2 class="subtitle">{{ description }}</h2>
           </div>
         </div>
       </section>
