@@ -1,3 +1,6 @@
+---
+assets: "https://halivert.dev/assets"
+---
 <!DOCTYPE html>
 <html lang="es-MX" class="dark">
   <head>
@@ -7,17 +10,17 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
 
-    <link rel="stylesheet" href="{{ site.assets }}/css/solarized.css" />
+    <link rel="stylesheet" href="{{ layout.assets }}/css/solarized.css" />
 
     <link
       rel="stylesheet"
-      href="{{ site.assets }}/css/halivert-layout.css"
+      href="{{ layout.assets }}/css/halivert-layout.css"
     />
 
-    <link rel="stylesheet" href="{{ site.assets }}/css/halivert.css" />
-    <link rel="stylesheet" href="{{ site.assets }}/css/halivert-dark.css" />
+    <link rel="stylesheet" href="{{ layout.assets }}/css/halivert.css" />
+    <link rel="stylesheet" href="{{ layout.assets }}/css/halivert-dark.css" />
 
-    <link rel="stylesheet" href="{{ site.assets }}/css/fa.min.css"/>
+    <link rel="stylesheet" href="{{ layout.assets }}/css/fa.min.css"/>
 
     {%-
       assign gistTheme = "https://cdn.rawgit.com"
@@ -32,8 +35,8 @@
     <meta name="monetization" content="$ilp.uphold.com/yJJL4YrpRMQi" />
 
     <script src="https://unpkg.com/turbolinks" defer></script>
-    <script src="{{ site.assets }}/js/main.js"></script>
-    <script src="{{ site.assets }}/js/nav.js" defer></script>
+    <script src="{{ layout.assets }}/js/main.js"></script>
+    <script src="{{ layout.assets }}/js/nav.js" defer></script>
 
     {%- capture title -%}
       {% if page.title %}{{ page.title }}
